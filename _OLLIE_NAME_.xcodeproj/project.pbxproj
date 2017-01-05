@@ -16,6 +16,7 @@
 		9DBA35021E1E7813002C28AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA35011E1E7813002C28AC /* Main.storyboard */; };
 		9DBA35041E1E811B002C28AC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA35031E1E811B002C28AC /* Settings.bundle */; };
 		9DBA35081E1E84E5002C28AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA35071E1E84E5002C28AC /* Localizable.strings */; };
+		9DBA350D1E1E87B5002C28AC /* ApplicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA350C1E1E87B5002C28AC /* ApplicationKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,10 @@
 		9DBA35011E1E7813002C28AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9DBA35031E1E811B002C28AC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9DBA35071E1E84E5002C28AC /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9DBA350C1E1E87B5002C28AC /* ApplicationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationKeys.swift; sourceTree = "<group>"; };
+		9DBA350E1E1E8836002C28AC /* ApplicationKeysApp Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationKeysApp Store.swift"; sourceTree = "<group>"; };
+		9DBA350F1E1E8836002C28AC /* ApplicationKeysBeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationKeysBeta.swift; sourceTree = "<group>"; };
+		9DBA35101E1E8836002C28AC /* ApplicationKeysDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationKeysDebug.swift; sourceTree = "<group>"; };
 		A3D464BF22063DF4BED54150 /* Pods__OLLIE_NAME__Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__OLLIE_NAME__Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ECF4EEADC3A63F7EAC4B98 /* Pods-_OLLIE_NAME_.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_.app store.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_.app store.xcconfig"; sourceTree = "<group>"; };
 		ECF5C146408339E2EEACC5E2 /* Pods-_OLLIE_NAME_ Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_ Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_ Tests/Pods-_OLLIE_NAME_ Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				9DBA34B31E1E6EDF002C28AC /* AppDelegate.swift */,
+				9DBA350B1E1E8794002C28AC /* Components */,
 				9DBA35001E1E7806002C28AC /* Modules */,
 				9DBA34C51E1E6EF7002C28AC /* UI */,
 				9DBA34C61E1E6EFD002C28AC /* Supporting Files */,
@@ -182,6 +188,27 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		9DBA350A1E1E877E002C28AC /* Application Keys */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA350E1E1E8836002C28AC /* ApplicationKeysApp Store.swift */,
+				9DBA350F1E1E8836002C28AC /* ApplicationKeysBeta.swift */,
+				9DBA35101E1E8836002C28AC /* ApplicationKeysDebug.swift */,
+				9DBA350C1E1E87B5002C28AC /* ApplicationKeys.swift */,
+			);
+			name = "Application Keys";
+			path = "Application Keys";
+			sourceTree = "<group>";
+		};
+		9DBA350B1E1E8794002C28AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9DBA350A1E1E877E002C28AC /* Application Keys */,
+			);
+			name = Components;
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D06FF22127BE29921D2E223A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +226,7 @@
 			buildConfigurationList = 9DBA34C21E1E6EDF002C28AC /* Build configuration list for PBXNativeTarget "_OLLIE_NAME_" */;
 			buildPhases = (
 				72B427507BE433D0CC539090 /* [CP] Check Pods Manifest.lock */,
+				9DBA35091E1E870D002C28AC /* Copy the ApplicationKeys */,
 				9DBA34AC1E1E6EDF002C28AC /* Sources */,
 				9DBA34AD1E1E6EDF002C28AC /* Frameworks */,
 				9DBA34AE1E1E6EDF002C28AC /* Resources */,
@@ -359,6 +387,20 @@
 			shellPath = /bin/sh;
 			shellScript = ./scripts/copy_version_to_settings;
 		};
+		9DBA35091E1E870D002C28AC /* Copy the ApplicationKeys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy the ApplicationKeys";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./scripts/copy_application_keys;
+		};
 		A2CD123FF65A48CCBE5BFEFF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DBA350D1E1E87B5002C28AC /* ApplicationKeys.swift in Sources */,
 				9DBA34B41E1E6EDF002C28AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

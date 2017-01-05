@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo '💾  Copy the configuration dependent application keys to the compiled application keys.'
+cp "${PROJECT_DIR}/${TARGET_NAME}/Components/Application Keys/ApplicationKeys${CONFIGURATION}.swift" "${PROJECT_DIR}/${TARGET_NAME}/Components/Application Keys/ApplicationKeys.swift"
