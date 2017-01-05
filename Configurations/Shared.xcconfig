@@ -1,0 +1,11 @@
+//
+//  Shared.xcconfig
+//  _OLLIE_NAME_
+//
+//  Created by Ollie on 05/01/2017.
+//  Copyright © 2017 iCapps. All rights reserved.
+//
+
+PRODUCT_NAME=_OLLIE_NAME_$(NAME_SUFFIX)
+PRODUCT_MODULE_NAME=_OLLIE_NAME_
+PRODUCT_BUNDLE_IDENTIFIER=com.icapps._OLLIE_NAME_AS_DOMAIN_${BUNDLE_IDENTIFIER_SUFFIX}

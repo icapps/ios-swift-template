@@ -1,0 +1,13 @@
+//
+//  Debug.xcconfig
+//  _OLLIE_NAME_
+//
+//  Created by Ollie on 05/01/2017.
+//  Copyright © 2017 iCapps. All rights reserved.
+//
+
+NAME_SUFFIX=α
+BUNDLE_IDENTIFIER_SUFFIX=.debug
+ENABLE_TESTABILITY=YES
+
+#include "./Shared.xcconfig"

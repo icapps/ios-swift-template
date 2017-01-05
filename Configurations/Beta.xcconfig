@@ -1,0 +1,12 @@
+//
+//  Beta.xcconfig
+//  _OLLIE_NAME_
+//
+//  Created by Ollie on 05/01/2017.
+//  Copyright © 2017 iCapps. All rights reserved.
+//
+
+NAME_SUFFIX=β
+BUNDLE_IDENTIFIER_SUFFIX=.beta
+
+#include "./Shared.xcconfig"

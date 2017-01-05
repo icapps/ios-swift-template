@@ -1,0 +1,17 @@
+//
+//  App Store.xcconfig
+//  _OLLIE_NAME_
+//
+//  Created by Ollie on 05/01/2017.
+//  Copyright © 2017 iCapps. All rights reserved.
+//
+
+NAME_SUFFIX=
+BUNDLE_IDENTIFIER_SUFFIX=
+
+// Set the `useFlurry` macro to enable analytics.
+OTHER_SWIFT_FLAGS=$(inherited) -DuseFlurry
+
+#include "./Shared.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER=com.philips.LightingPoS2
