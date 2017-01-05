@@ -185,7 +185,10 @@ after_all do |lane|
       :git_branch, 
       :git_author, 
       :last_git_commit_message
-    ]
+    ],
+    attachment_properties: {
+      title: '_OLLIE_NAME_'
+    }
   )
   clean_build_artifacts
 end
@@ -204,7 +207,10 @@ error do |lane, exception|
       :git_branch, 
       :git_author, 
       :last_git_commit_message
-    ]
+    ],
+    attachment_properties: {
+      title: '_OLLIE_NAME_'
+    }
   )
   clean_build_artifacts
 end
