@@ -16,7 +16,7 @@
 		9DBA34D21E1E721B002C28AC /* Beta.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA34CE1E1E721B002C28AC /* Beta.xcconfig */; };
 		9DBA34D31E1E721B002C28AC /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA34CF1E1E721B002C28AC /* Debug.xcconfig */; };
 		9DBA34D41E1E721C002C28AC /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA34D01E1E721B002C28AC /* Shared.xcconfig */; };
-		9DBA34F61E1E778F002C28AC /* DummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA34F51E1E778F002C28AC /* DummyTests.swift */; };
+		9DBA34F61E1E778F002C28AC /* DummySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA34F51E1E778F002C28AC /* DummySpec.swift */; };
 		9DBA35021E1E7813002C28AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA35011E1E7813002C28AC /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		9DBA34CF1E1E721B002C28AC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9DBA34D01E1E721B002C28AC /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		9DBA34F31E1E778F002C28AC /* _OLLIE_NAME_ Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "_OLLIE_NAME_ Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9DBA34F51E1E778F002C28AC /* DummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTests.swift; sourceTree = "<group>"; };
+		9DBA34F51E1E778F002C28AC /* DummySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySpec.swift; sourceTree = "<group>"; };
 		9DBA34F71E1E778F002C28AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DBA35011E1E7813002C28AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A3D464BF22063DF4BED54150 /* Pods__OLLIE_NAME__Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__OLLIE_NAME__Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,16 +161,14 @@
 			children = (
 				9DBA34F71E1E778F002C28AC /* Info.plist */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9DBA34FF1E1E779F002C28AC /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				9DBA34F51E1E778F002C28AC /* DummyTests.swift */,
+				9DBA34F51E1E778F002C28AC /* DummySpec.swift */,
 			);
-			name = Specs;
 			path = Specs;
 			sourceTree = "<group>";
 		};
@@ -179,7 +177,6 @@
 			children = (
 				9DBA35011E1E7813002C28AC /* Main.storyboard */,
 			);
-			name = Modules;
 			path = Modules;
 			sourceTree = "<group>";
 		};
@@ -407,7 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DBA34F61E1E778F002C28AC /* DummyTests.swift in Sources */,
+				9DBA34F61E1E778F002C28AC /* DummySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +767,7 @@
 				9DBA34FD1E1E778F002C28AC /* App Store */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Beta;
 		};
 /* End XCConfigurationList section */
 	};
