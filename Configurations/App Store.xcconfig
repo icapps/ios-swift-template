@@ -9,9 +9,6 @@
 NAME_SUFFIX=
 BUNDLE_IDENTIFIER_SUFFIX=
 
-// Set the `useFlurry` macro to enable analytics.
-OTHER_SWIFT_FLAGS=$(inherited) -DuseFlurry
-
 #include "./Shared.xcconfig"
 
 PRODUCT_BUNDLE_IDENTIFIER=com.philips.LightingPoS2
