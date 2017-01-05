@@ -196,7 +196,6 @@
 				9DBA35101E1E8836002C28AC /* ApplicationKeysDebug.swift */,
 				9DBA350C1E1E87B5002C28AC /* ApplicationKeys.swift */,
 			);
-			name = "Application Keys";
 			path = "Application Keys";
 			sourceTree = "<group>";
 		};
@@ -205,7 +204,6 @@
 			children = (
 				9DBA350A1E1E877E002C28AC /* Application Keys */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -276,6 +274,7 @@
 				TargetAttributes = {
 					9DBA34AF1E1E6EDF002C28AC = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = FAJTRUZ6J9;
 						ProvisioningStyle = Manual;
 					};
 					9DBA34F21E1E778F002C28AC = {
@@ -591,12 +590,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FAJTRUZ6J9;
 				INFOPLIST_FILE = "_OLLIE_NAME_/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icapps.-OLLIE-NAME-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2e856cf3-a961-4fd6-90fa-dafbfa0a4a93";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Development - Wildcard";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -607,13 +608,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FAJTRUZ6J9;
 				INFOPLIST_FILE = "_OLLIE_NAME_/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icapps.-OLLIE-NAME-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f974697e-effa-4e8f-a081-152aa08b1f75";
+				PROVISIONING_PROFILE_SPECIFIER = "iCapps Wildcard - In House";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Beta;
