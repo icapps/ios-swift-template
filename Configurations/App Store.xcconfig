@@ -10,5 +10,3 @@ NAME_SUFFIX=
 BUNDLE_IDENTIFIER_SUFFIX=
 
 #include "./Shared.xcconfig"
-
-PRODUCT_BUNDLE_IDENTIFIER=com.philips.LightingPoS2
