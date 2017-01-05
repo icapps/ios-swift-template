@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71DD7D35FEF432528C214A15 /* Pods__OLLIE_NAME_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B471348A8284A514BB8764 /* Pods__OLLIE_NAME_.framework */; };
+		991502B2D95E163A246EE139 /* Pods__OLLIE_NAME__Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D464BF22063DF4BED54150 /* Pods__OLLIE_NAME__Tests.framework */; };
 		9DBA34B41E1E6EDF002C28AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA34B31E1E6EDF002C28AC /* AppDelegate.swift */; };
 		9DBA34BB1E1E6EDF002C28AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA34BA1E1E6EDF002C28AC /* Assets.xcassets */; };
 		9DBA34BE1E1E6EDF002C28AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA34BC1E1E6EDF002C28AC /* LaunchScreen.storyboard */; };
@@ -29,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12B471348A8284A514BB8764 /* Pods__OLLIE_NAME_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__OLLIE_NAME_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E55923A5EBED37518A017B2 /* Pods-_OLLIE_NAME_ Tests.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_ Tests.beta.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_ Tests/Pods-_OLLIE_NAME_ Tests.beta.xcconfig"; sourceTree = "<group>"; };
+		73B0CE74A5CA17B8271A9A83 /* Pods-_OLLIE_NAME_ Tests.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_ Tests.app store.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_ Tests/Pods-_OLLIE_NAME_ Tests.app store.xcconfig"; sourceTree = "<group>"; };
+		73DF312EEEAB16B08F1D0696 /* Pods-_OLLIE_NAME_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_.debug.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_.debug.xcconfig"; sourceTree = "<group>"; };
+		9B15F0EE2D0EDD538EBCB0EF /* Pods-_OLLIE_NAME_.beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_.beta.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_.beta.xcconfig"; sourceTree = "<group>"; };
 		9DBA34B01E1E6EDF002C28AC /* _OLLIE_NAME_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _OLLIE_NAME_.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBA34B31E1E6EDF002C28AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DBA34BA1E1E6EDF002C28AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +49,9 @@
 		9DBA34F51E1E778F002C28AC /* DummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTests.swift; sourceTree = "<group>"; };
 		9DBA34F71E1E778F002C28AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DBA35011E1E7813002C28AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A3D464BF22063DF4BED54150 /* Pods__OLLIE_NAME__Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__OLLIE_NAME__Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4ECF4EEADC3A63F7EAC4B98 /* Pods-_OLLIE_NAME_.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_.app store.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_.app store.xcconfig"; sourceTree = "<group>"; };
+		ECF5C146408339E2EEACC5E2 /* Pods-_OLLIE_NAME_ Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_ Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_ Tests/Pods-_OLLIE_NAME_ Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DD7D35FEF432528C214A15 /* Pods__OLLIE_NAME_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +67,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991502B2D95E163A246EE139 /* Pods__OLLIE_NAME__Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E7CF0168F0C4049D0EB3913 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73DF312EEEAB16B08F1D0696 /* Pods-_OLLIE_NAME_.debug.xcconfig */,
+				9B15F0EE2D0EDD538EBCB0EF /* Pods-_OLLIE_NAME_.beta.xcconfig */,
+				D4ECF4EEADC3A63F7EAC4B98 /* Pods-_OLLIE_NAME_.app store.xcconfig */,
+				ECF5C146408339E2EEACC5E2 /* Pods-_OLLIE_NAME_ Tests.debug.xcconfig */,
+				1E55923A5EBED37518A017B2 /* Pods-_OLLIE_NAME_ Tests.beta.xcconfig */,
+				73B0CE74A5CA17B8271A9A83 /* Pods-_OLLIE_NAME_ Tests.app store.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9DBA34A71E1E6EDF002C28AC = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +94,8 @@
 				9DBA34B21E1E6EDF002C28AC /* _OLLIE_NAME_ */,
 				9DBA34F41E1E778F002C28AC /* _OLLIE_NAME_ Tests */,
 				9DBA34B11E1E6EDF002C28AC /* Products */,
+				4E7CF0168F0C4049D0EB3913 /* Pods */,
+				D06FF22127BE29921D2E223A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +162,7 @@
 				9DBA34F71E1E778F002C28AC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9DBA34FF1E1E779F002C28AC /* Specs */ = {
@@ -143,6 +171,7 @@
 				9DBA34F51E1E778F002C28AC /* DummyTests.swift */,
 			);
 			name = Specs;
+			path = Specs;
 			sourceTree = "<group>";
 		};
 		9DBA35001E1E7806002C28AC /* Modules */ = {
@@ -151,6 +180,16 @@
 				9DBA35011E1E7813002C28AC /* Main.storyboard */,
 			);
 			name = Modules;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D06FF22127BE29921D2E223A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12B471348A8284A514BB8764 /* Pods__OLLIE_NAME_.framework */,
+				A3D464BF22063DF4BED54150 /* Pods__OLLIE_NAME__Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DBA34C21E1E6EDF002C28AC /* Build configuration list for PBXNativeTarget "_OLLIE_NAME_" */;
 			buildPhases = (
+				72B427507BE433D0CC539090 /* [CP] Check Pods Manifest.lock */,
 				9DBA34AC1E1E6EDF002C28AC /* Sources */,
 				9DBA34AD1E1E6EDF002C28AC /* Frameworks */,
 				9DBA34AE1E1E6EDF002C28AC /* Resources */,
+				4871AA78D0DC2BA401D5F46E /* [CP] Embed Pods Frameworks */,
+				BB5F982A77CB8A211090DDDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DBA34FA1E1E778F002C28AC /* Build configuration list for PBXNativeTarget "_OLLIE_NAME_ Tests" */;
 			buildPhases = (
+				89F7EF9E8E6661E231D85669 /* [CP] Check Pods Manifest.lock */,
 				9DBA34EF1E1E778F002C28AC /* Sources */,
 				9DBA34F01E1E778F002C28AC /* Frameworks */,
 				9DBA34F11E1E778F002C28AC /* Resources */,
+				F78504D6B2E82CEDE3BEB71E /* [CP] Embed Pods Frameworks */,
+				A2CD123FF65A48CCBE5BFEFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +300,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4871AA78D0DC2BA401D5F46E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B427507BE433D0CC539090 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		89F7EF9E8E6661E231D85669 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2CD123FF65A48CCBE5BFEFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-_OLLIE_NAME_ Tests/Pods-_OLLIE_NAME_ Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5F982A77CB8A211090DDDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F78504D6B2E82CEDE3BEB71E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-_OLLIE_NAME_ Tests/Pods-_OLLIE_NAME_ Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DBA34AC1E1E6EDF002C28AC /* Sources */ = {
@@ -393,6 +531,7 @@
 		};
 		9DBA34C31E1E6EDF002C28AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73DF312EEEAB16B08F1D0696 /* Pods-_OLLIE_NAME_.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -408,6 +547,7 @@
 		};
 		9DBA34C41E1E6EDF002C28AC /* Beta */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B15F0EE2D0EDD538EBCB0EF /* Pods-_OLLIE_NAME_.beta.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -467,6 +607,7 @@
 		};
 		9DBA34C81E1E71ED002C28AC /* App Store */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4ECF4EEADC3A63F7EAC4B98 /* Pods-_OLLIE_NAME_.app store.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -482,10 +623,11 @@
 		};
 		9DBA34FB1E1E778F002C28AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECF5C146408339E2EEACC5E2 /* Pods-_OLLIE_NAME_ Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = FAJTRUZ6J9;
-				INFOPLIST_FILE = "_OLLIE_NAME_ Tests/Info.plist";
+				INFOPLIST_FILE = "_OLLIE_NAME_ Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.icapps.-OLLIE-NAME--Tests";
@@ -497,6 +639,7 @@
 		};
 		9DBA34FC1E1E778F002C28AC /* Beta */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E55923A5EBED37518A017B2 /* Pods-_OLLIE_NAME_ Tests.beta.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,7 +674,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "_OLLIE_NAME_ Tests/Info.plist";
+				INFOPLIST_FILE = "_OLLIE_NAME_ Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -547,6 +690,7 @@
 		};
 		9DBA34FD1E1E778F002C28AC /* App Store */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73B0CE74A5CA17B8271A9A83 /* Pods-_OLLIE_NAME_ Tests.app store.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -581,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "_OLLIE_NAME_ Tests/Info.plist";
+				INFOPLIST_FILE = "_OLLIE_NAME_ Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;

@@ -1,0 +1,6 @@
+framework module Pods__OLLIE_NAME_ {
+  umbrella header "Pods-_OLLIE_NAME_-umbrella.h"
+
+  export *
+  module * { export * }
+}

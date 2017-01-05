@@ -1,0 +1,6 @@
+framework module Pods__OLLIE_NAME__Tests {
+  umbrella header "Pods-_OLLIE_NAME_ Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
