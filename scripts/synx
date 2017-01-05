@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo '🖥  Organizing the Xcode folders on the disk.'
+synx --no-sort-by-name _OLLIE_NAME_.xcodeproj
