@@ -14,6 +14,7 @@
 		9DBA34BE1E1E6EDF002C28AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA34BC1E1E6EDF002C28AC /* LaunchScreen.storyboard */; };
 		9DBA34F61E1E778F002C28AC /* DummySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA34F51E1E778F002C28AC /* DummySpec.swift */; };
 		9DBA35021E1E7813002C28AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA35011E1E7813002C28AC /* Main.storyboard */; };
+		9DBA35041E1E811B002C28AC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DBA35031E1E811B002C28AC /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9DBA34F51E1E778F002C28AC /* DummySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySpec.swift; sourceTree = "<group>"; };
 		9DBA34F71E1E778F002C28AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DBA35011E1E7813002C28AC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9DBA35031E1E811B002C28AC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A3D464BF22063DF4BED54150 /* Pods__OLLIE_NAME__Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__OLLIE_NAME__Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ECF4EEADC3A63F7EAC4B98 /* Pods-_OLLIE_NAME_.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_.app store.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_.app store.xcconfig"; sourceTree = "<group>"; };
 		ECF5C146408339E2EEACC5E2 /* Pods-_OLLIE_NAME_ Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-_OLLIE_NAME_ Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-_OLLIE_NAME_ Tests/Pods-_OLLIE_NAME_ Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9DBA34BF1E1E6EDF002C28AC /* Info.plist */,
+				9DBA35031E1E811B002C28AC /* Settings.bundle */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DBA35041E1E811B002C28AC /* Settings.bundle in Resources */,
 				9DBA35021E1E7813002C28AC /* Main.storyboard in Resources */,
 				9DBA34BE1E1E6EDF002C28AC /* LaunchScreen.storyboard in Resources */,
 				9DBA34BB1E1E6EDF002C28AC /* Assets.xcassets in Resources */,

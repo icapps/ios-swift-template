@@ -18,5 +18,14 @@ target '_OLLIE_NAME_' do
     pod 'Quick', '~> 1.0'
     pod 'Nimble', '~> 5.1'
   end
+end
 
+post_install do |installer|
+  # Write the acknowledgements to the Settings bundle.
+  require 'fileutils'
+  pods_acknowledgements_path = 'Pods/Target Support Files/Pods-_OLLIE_NAME_/Pods-_OLLIE_NAME_-acknowledgements.plist'
+  if File.file?(pods_acknowledgements_path)
+    settings_bundle_path = Dir.glob("**/*Settings.bundle*").first
+    FileUtils.cp_r(pods_acknowledgements_path, "#{settings_bundle_path}/Acknowledgements.plist", remove_destination: true)
+  end
 end
