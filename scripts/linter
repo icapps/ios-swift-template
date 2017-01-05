@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo '🖥  Correcting your code with swiftlint.'
+swiftlint autocorrect
