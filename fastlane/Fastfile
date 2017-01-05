@@ -1,0 +1,196 @@
+# Fix the fastlane version so that we don't get any surprises while deploying.
+fastlane_version '2.5.0'
+
+# Select the correct version of Xcode we want to build with on Jenkins.
+xcode_select('/Applications/Xcode 8.2.app') if is_ci?
+
+# Don't generate README files.
+skip_docs
+
+#####################
+### CONFIGURATION ###
+#####################
+
+# Project configuration.
+workspace = '_OLLIE_NAME_.xcworkspace'
+project =   '_OLLIE_NAME_.xcodeproj'
+scheme =    '_OLLIE_NAME_'
+
+# Hockey configuration.
+hockey_app_api_key = ENV['FL_HOCKEY_API_TOKEN']
+hockey_app_teams =   %w(1234)
+
+# TestFlight configuration.
+testflight_identifier = 'com.icapps._OLLIE_NAME_AS_DOMAIN_'
+
+# Apteligent configuration.
+apteligent_app_id =      '123123123'
+apteligent_oauth_token = '123123123'
+
+# Deployment configuration.
+slack_room = '#jenkins'
+
+####################
+### PUBLIC LANES ###
+####################
+
+# This lane is used for checking if your pull request's code is according to our 
+# coding guidelines and that the application's tests run.
+lane :pr do
+  # Check the coding guidelines.
+  check_code_style
+  # Run the tests.
+  run_tests
+  # Run the code coverage generation.
+  run_coverage
+end
+
+# The beta lane deploys the appication to HockeyApp but prior to deploying there
+# are some other tasks executed like updating translations, incrementing the
+# build number...
+lane :beta do
+  # Make sure the brach is the beta branch.
+  ensure_git_branch branch: 'beta'
+  # Run the tests.
+  run_tests
+  # We reset the git repository because the tests could update some files.
+  reset_git_repo force: true
+  # We increment the build number without commiting.
+  increment_build_number
+  # Configuration of the translations importer can be found in the
+  # `.translations` file in the root of the repository.
+  update_translations
+  # Build the application with the given configuration.
+  build(configuration: 'Beta')
+  # Upload the build to HockeyApp.
+  upload_to_hockey
+  # Upload the dSYM to Apteligent.
+  upload_to_apteligent
+  # When everything succeeeds, commit and push the changes.
+  commit_tag_and_push
+end
+
+########################
+### 🔑  PRIVATE LANES ###
+########################
+
+private_lane :check_code_style do
+  # Check if the code is according to our coding guidelines.
+  swiftlint(strict: true)
+end
+
+# Run the tests.
+private_lane :run_tests do
+  scan(
+    workspace:     workspace,
+    scheme:        scheme,
+    clean:         true,
+    configuration: 'Debug',
+    device:        'iPad Air 2'
+  )
+end
+
+# Create code coverage reports. We ignore some pods because otherwise we get an
+# incorrect coverage overview.
+private_lane :run_coverage do
+  xcov(
+    workspace:        workspace,
+    scheme:           scheme,
+    exclude_targets:  %w(
+      Stella.framework
+      Nimble.framework
+      Quick.framework
+    ).join(', ')
+  )
+end
+
+# Commit the version bump and tag this commit. When this succeeds we push the
+# changes to the origin.
+private_lane :commit_tag_and_push do
+  # Persist the git changes.
+  commit_version_bump(
+    force:     true,
+    xcodeproj: project
+  )
+  add_git_tag
+  push_to_git_remote
+end
+
+# Build application
+private_lane :build do |options|
+  gym(
+    workspace:            workspace,
+    scheme:               scheme,
+    configuration:        options[:configuration],
+    use_legacy_build_api: true
+  )
+end
+
+# Upload the build to HockeyApp and open it up for the given teams.
+private_lane :upload_to_hockey do
+  hockey(
+    api_token:    hockey_app_api_key,
+    teams:        hockey_app_teams.join(','),
+    status:       '2', # The status is available for download.
+    release_type: '0' # We set the release type to be beta.
+  )
+end
+
+# Upload the build to TestFlight.
+private_lane :upload_to_testflight do
+  pilot(
+    app_identifier:  testflight_identifier,
+    skip_submission: true # Don't automagically submit for review.
+  )
+end
+
+# Upload the dSYM to Apteligent.
+private_lane :upload_to_apteligent do
+  # Upload the dSYM to Apteligent, for more info go to the Readme file
+  crittercism(
+    oauth_token: apteligent_oauth_token,
+    app_id:      apteligent_app_id
+  )
+end
+
+#################
+### CALLBACKS ###
+#################
+
+# Post a notification to Slack every time a lane was successful.
+after_all do |lane|
+  next unless is_ci?
+
+  slack(
+    channel:               slack_room,
+    success:               true,
+    default_payloads:      [
+      :lane, 
+      :test_result, 
+      :git_branch, 
+      :git_author, 
+      :last_git_commit_message
+    ]
+  )
+  clean_build_artifacts
+end
+
+# When an error occurs we post a failure notification to Slack.
+error do |lane, exception|
+  next unless is_ci?
+
+  slack(
+    message:               exception.message,
+    channel:               slack_room,
+    success:               false,
+    default_payloads:      [
+      :lane, 
+      :test_result, 
+      :git_branch, 
+      :git_author, 
+      :last_git_commit_message
+    ]
+  )
+  clean_build_artifacts
+end
+
