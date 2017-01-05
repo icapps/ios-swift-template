@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo '💾  Copy the settings information to the settings bundle.'
+
+plist_location="${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/Settings.bundle/Root.plist"
+
+version=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${PROJECT_DIR}/${TARGET_NAME}/Supporting files/Info.plist")
+/usr/libexec/PlistBuddy "$plist_location" -c "set PreferenceSpecifiers:1:DefaultValue $version"
+echo "💾  Copied the version number to the Settings plist."
+
+version=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "${PROJECT_DIR}/${TARGET_NAME}/Supporting files/Info.plist")
+/usr/libexec/PlistBuddy "$plist_location" -c "set PreferenceSpecifiers:2:DefaultValue $version"
+echo "💾  Copied the build number to the Settings plist."
