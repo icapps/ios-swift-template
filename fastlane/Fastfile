@@ -60,6 +60,8 @@ lane :beta do
   # Configuration of the translations importer can be found in the
   # `.translations` file in the root of the repository.
   update_translations
+  # Badge the application icon.
+  apply_badge_to_icon configuration: 'Beta'
   # Build the application with the given configuration.
   build(configuration: 'Beta')
   # Upload the build to HockeyApp.
@@ -114,6 +116,19 @@ private_lane :commit_tag_and_push do
   )
   add_git_tag
   push_to_git_remote
+end
+
+private_lane :apply_badge_to_icon do |options|
+  # Fetch the version number from the configuration.
+  version_number = get_version_number(xcodeproj: project)
+  # Fetch the build number from the configuration.
+  build_number = get_build_number(xcodeproj: project)
+  # Apply the badge to the icon.
+  badge(
+    shield:   "#{options[:configuration]}-#{version_number}.#{build_number}-blue", 
+    no_badge: true,
+    shield_no_resize: true
+  )
 end
 
 # Build application
