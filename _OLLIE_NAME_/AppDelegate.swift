@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  _OLLIE_NAME_
 //
-//  Created by Jelle Vandebeeck on 05/01/2017.
+//  Created by Ollie on 05/01/2017.
 //  Copyright © 2017 iCapps. All rights reserved.
 //
 
