@@ -63,3 +63,9 @@ the upload like this:
 ```bash
 fastlane beta
 ```
+
+## Contributors
+
+These are the devs resposible for this project:
+
+- 🤓  Ollie
