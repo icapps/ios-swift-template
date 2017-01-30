@@ -1,5 +1,5 @@
 # Fix the fastlane version so that we don't get any surprises while deploying.
-fastlane_version '2.5.0'
+fastlane_version '2.12.0'
 
 # Select the correct version of Xcode we want to build with on Jenkins.
 xcode_select('/Applications/Xcode 8.2.app') if is_ci?
