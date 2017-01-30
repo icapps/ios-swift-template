@@ -89,6 +89,6 @@ fi
 if [[ "$CONFIGURATION" == "Beta" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Stella/Stella.framework"
 fi
-if [[ "$CONFIGURATION" == "App Store" ]]; then
+if [[ "$CONFIGURATION" == "Production" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Stella/Stella.framework"
 fi

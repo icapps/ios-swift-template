@@ -91,7 +91,7 @@ if [[ "$CONFIGURATION" == "Beta" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
 fi
-if [[ "$CONFIGURATION" == "App Store" ]]; then
+if [[ "$CONFIGURATION" == "Production" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
 fi
