@@ -17,6 +17,12 @@ gem install xcov
 gem install icapps-translations
 ```
 
+Here is a list over version we require:
+
+- SwiftLint **1.16.1**
+- Cocoapods **1.2.0**
+- Fastlane **2.12.0**
+
 ## Folder structure
 
 We keep our Xcode folders mapped to the directories on your disk. This requires
