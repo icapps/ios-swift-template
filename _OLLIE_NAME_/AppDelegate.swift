@@ -8,6 +8,7 @@
 
 import UIKit
 import Stella
+import ICACrashReporter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool { // swiftlint:disable:this line_length
         // Set the correct print level.
         Output.level = ApplicationKeys.shared.printLevel
+        // Setup crash reporting.
+        setupCrashReporting()
         
         return true
     }
 
+}
+
+private extension AppDelegate {
+    
+    func setupCrashReporting() {
+        ICACrashReporter.sharedInstance().provider = ICAConsoleCrashReporter()
+    }
+    
 }
