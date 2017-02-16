@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## ICACrashReporter
+
+Copyright (C) 2015 iCapps
+
 ## Stella
 
 Copyright (c) 2016 iCapps

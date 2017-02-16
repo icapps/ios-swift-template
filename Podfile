@@ -1,6 +1,10 @@
 # Make sure that the pods don't get an extra scheme.
 install! 'cocoapods', deterministic_uuids: false, share_schemes_for_development_pods: false
 
+# Add our custom specs repository.
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/icapps/specs'
+
 # Support from iOS 9.
 platform :ios, '9.3'
 
@@ -10,6 +14,9 @@ target '_OLLIE_NAME_' do
 
   # Out utility pod.
   pod 'Stella', '~> 1.1'
+
+  # Our Crash reporter.
+  pod 'ICACrashReporter', '~> 1.2'
 
   target '_OLLIE_NAME_ Tests' do
     inherit! :search_paths

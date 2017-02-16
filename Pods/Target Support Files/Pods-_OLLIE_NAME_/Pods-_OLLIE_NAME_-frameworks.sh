@@ -89,12 +89,15 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ICACrashReporter/ICACrashReporter.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Stella/Stella.framework"
 fi
 if [[ "$CONFIGURATION" == "Beta" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ICACrashReporter/ICACrashReporter.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Stella/Stella.framework"
 fi
 if [[ "$CONFIGURATION" == "Production" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ICACrashReporter/ICACrashReporter.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Stella/Stella.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
