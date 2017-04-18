@@ -9,12 +9,16 @@ On order to do everything you'll need to install the following dependencies:
 
 ```bash
 brew install swiftlint
+brew install badge
+brew install librsvg
 
 gem install synx
 gem install cocoapods
 gem install fastlane
 gem install xcov
 gem install icapps-translations
+gem install colorize
+
 ```
 
 Here is a list over version we require:
