@@ -245,7 +245,7 @@ if lane == :beta then
         {
         title: "CHANGELOG",
         value: "#{changelog}",
-        mrkdwn: true
+        short: false
         }
         ]
       }
