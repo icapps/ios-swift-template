@@ -21,7 +21,6 @@ scheme =    '_OLLIE_NAME_'
 
 # Hockey configuration.
 hockey_app_api_key = ENV['FL_HOCKEY_API_TOKEN']
-hockey_app_teams =   %w(1234)
 
 # TestFlight configuration.
 testflight_identifier = 'com.icapps._OLLIE_NAME_AS_DOMAIN_'
@@ -39,7 +38,7 @@ slack_room = '#jenkins'
 ### PUBLIC LANES ###
 ####################
 
-# This lane is used for checking if your pull request's code is according to our 
+# This lane is used for checking if your pull request's code is according to our
 # coding guidelines and that the application's tests run.
 lane :pr do
   # Check the coding guidelines.
@@ -80,7 +79,7 @@ lane :beta do
   commit_tag_and_push
 end
 
-# The production lane deploys the appication to TestFlight but prior to deploying 
+# The production lane deploys the appication to TestFlight but prior to deploying
 # there are some other tasks executed like updating translations, incrementing the
 # build number...
 lane :production do
@@ -161,7 +160,7 @@ private_lane :apply_badge_to_icon do |options|
   build_number = get_build_number(xcodeproj: project)
   # Apply the badge to the icon.
   badge(
-    shield:   "#{options[:configuration]}-#{version_number}.#{build_number}-blue", 
+    shield:   "#{options[:configuration]}-#{version_number}.#{build_number}-blue",
     no_badge: true,
     shield_no_resize: true
   )
@@ -181,7 +180,6 @@ end
 private_lane :upload_to_hockey do
   hockey(
     api_token:    hockey_app_api_key,
-    teams:        hockey_app_teams.join(','),
     status:       '2', # The status is available for download.
     release_type: '0' # We set the release type to be beta.
   )
@@ -216,10 +214,10 @@ after_all do |lane|
     channel:               slack_room,
     success:               true,
     default_payloads:      [
-      :lane, 
-      :test_result, 
-      :git_branch, 
-      :git_author, 
+      :lane,
+      :test_result,
+      :git_branch,
+      :git_author,
       :last_git_commit_message
     ],
     attachment_properties: {
@@ -238,10 +236,10 @@ error do |lane, exception|
     channel:               slack_room,
     success:               false,
     default_payloads:      [
-      :lane, 
-      :test_result, 
-      :git_branch, 
-      :git_author, 
+      :lane,
+      :test_result,
+      :git_branch,
+      :git_author,
       :last_git_commit_message
     ],
     attachment_properties: {
@@ -250,4 +248,3 @@ error do |lane, exception|
   )
   clean_build_artifacts
 end
-
