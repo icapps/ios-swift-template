@@ -1,3 +1,5 @@
+require 'colorize'
+
 # Fix the fastlane version so that we don't get any surprises while deploying.
 fastlane_version '2.12.0'
 
@@ -33,6 +35,7 @@ apteligent_production_oauth_token = '123123123'
 
 # Deployment configuration.
 slack_room = '#jenkins'
+changelog = File.read("../CHANGELOG.md") # manually add bullets with changes to this file
 
 ####################
 ### PUBLIC LANES ###
@@ -53,6 +56,8 @@ end
 # are some other tasks executed like updating translations, incrementing the
 # build number...
 lane :beta do
+  # Messages about builds are chared with the team
+  slack_room = '#_OLLIE_NAME_'
   # Make sure the brach is the beta branch.
   ensure_git_branch branch: 'beta'
   # Run the tests.
@@ -83,6 +88,8 @@ end
 # there are some other tasks executed like updating translations, incrementing the
 # build number...
 lane :production do
+  # Messages about builds are chared with the team
+  slack_room = '#_OLLIE_NAME_'
   # Make sure the brach is the master branch.
   ensure_git_branch branch: 'master'
   # Run the tests.
@@ -178,11 +185,16 @@ end
 
 # Upload the build to HockeyApp and open it up for the given teams.
 private_lane :upload_to_hockey do
+
+  puts "🎯 changelog to hockey #{changelog}".green
+
   hockey(
     api_token:    hockey_app_api_key,
     status:       '2', # The status is available for download.
-    release_type: '0' # We set the release type to be beta.
+    release_type: '0', # We set the release type to be beta.
+    notes: "#{changelog}" # By default this if fromatted as markdown
   )
+
 end
 
 # Upload the build to TestFlight.
@@ -210,6 +222,37 @@ end
 after_all do |lane|
   next unless is_ci?
 
+if lane == :beta then
+
+  slack(
+    channel:               slack_room,
+    success:               true,
+    default_payloads:      [
+      :lane,
+      :test_result,
+      :git_branch,
+      :git_author,
+      :last_git_commit_message
+    ],
+    attachment_properties: {
+      title: "#{_OLLIE_NAME_} beta",
+      fields: [
+          {
+          title: "Hockey Link",
+          value: "#{hockeyLink}",
+          short: true
+        },
+        {
+        title: "CHANGELOG",
+        value: "#{changelog}",
+        mrkdwn: true
+        }
+        ]
+      }
+    }
+  )
+else
+
   slack(
     channel:               slack_room,
     success:               true,
@@ -224,7 +267,11 @@ after_all do |lane|
       title: '_OLLIE_NAME_'
     }
   )
+
+end
+
   clean_build_artifacts
+
 end
 
 # When an error occurs we post a failure notification to Slack.
