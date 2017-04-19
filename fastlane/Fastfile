@@ -72,7 +72,7 @@ lane :beta do
   # Badge the application icon.
   apply_badge_to_icon configuration: 'Beta'
   # Build the application with the given configuration.
-  build(configuration: 'Beta')
+  build(configuration: 'Beta', export_method: 'enterprise')
   # Upload the build to HockeyApp.
   upload_to_hockey
   # Upload the dSYM to Apteligent.
@@ -102,7 +102,7 @@ lane :production do
   # `.translations` file in the root of the repository.
   update_translations
   # Build the application with the given configuration.
-  build(configuration: 'Production')
+  build(configuration: 'Production'export_method: 'app-store')
   # Upload the build to TestFlight.
   upload_to_testflight
   # Upload the dSYM to Apteligent.
@@ -179,7 +179,7 @@ private_lane :build do |options|
     workspace:            workspace,
     scheme:               scheme,
     configuration:        options[:configuration],
-    use_legacy_build_api: true
+    export_method: options[:export_method]
   )
 end
 
